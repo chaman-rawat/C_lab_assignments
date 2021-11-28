@@ -1,0 +1,18 @@
+a)
+    Hello is not defined.
+    return should be terminated with ';'.
+
+b)
+    Missing '{' after main().
+    Hello is not defined.
+
+c)
+    Repeated use of '*/' after closing the comment.
+
+d)
+    printf and return statement should be terminated with ';'.
+
+e)
+    printf() is undeclared.
+    Hello is not defined.
+    return statement should be terminated with ';'.
