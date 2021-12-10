@@ -2,34 +2,37 @@
 #include <stdio.h>
 #include <math.h>
 
-int is_palindrome(int);
-int count_digits(int);
+bool is_palindrome(char *);
+int strlen(char *);
 
 int main()
 {
-    int num;
+    char num[50];
     printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%s", num);
     printf(is_palindrome(num) ? "Palindrome\n" : "Not Palindrome\n");
     return 0;
 }
 
-int is_palindrome(int num)
+bool is_palindrome(char *num)
 {
-    int digits = count_digits(num);
-    int temp = num,
-        rev_num = 0;
-    do
-        rev_num += (temp % 10) * pow(10, --digits);
-    while (temp /= 10);
+    int len = strlen(num);
+    for (int i = 0, j = len - 1; i <= j; i++, j--)
+    {
+        if (num[i] == '.')
+            i++;
+        if (num[j] == '.')
+            j--;
+        if (num[i] != num[j])
+            return false;
+    }
 
-    return rev_num == num;
+    return true;
 }
 
-int count_digits(int num)
+int strlen(char *str)
 {
-    int n = 1;
-    while (num /= 10)
-        n++;
-    return n;
+    int len = 0;
+    while (str[len++]);
+    return --len;
 }
