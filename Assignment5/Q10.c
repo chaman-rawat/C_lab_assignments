@@ -1,4 +1,4 @@
-// See if the given character is capital letter or small letter or a digit.
+// WAP to see if the two lines are intersecting, parallel or coinciding.
 #include <stdio.h>
 
 int main()
